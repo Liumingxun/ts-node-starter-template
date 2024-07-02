@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // for using this launch config, must globally install `tsx` with
+      // your package manager, such as: `pnpm i -g tsx`
+      // more see: https://tsx.is/vscode
+      "type": "node",
+      "request": "launch",
+      "name": "tsx",
+      "runtimeExecutable": "tsx",
+      "skipFiles": [
+        // Node.js internal core modules
+        "<node_internals>/**",
+        // Ignore all dependencies (optional)
+        "${workspaceFolder}/node_modules/**"
+      ],
+      "program": "${file}"
+    }
+  ]
+}
